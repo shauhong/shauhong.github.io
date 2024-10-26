@@ -59,13 +59,13 @@ function WorkExperience() {
             {
                 experience && experience.map((item, index) => 
                     <Grid2 container size={12} key={index}>
-                    <Grid2 size={{xs: 3, lg:4}}>
+                    <Grid2 size={{xs: 3, lg:4}} color="word">
                         {item?.duration}
                     </Grid2>
                     <Grid2 size={{xs: 9, lg:8}}>   
                         <Typography sx={{fontWeight: "bold", mb: 1}}>{item?.company}</Typography>
-                        <Typography sx={{mb: 1}}>{item?.title}</Typography>
-                        <Typography>{item?.description}</Typography>
+                        <Typography sx={{mb: 1}} color="word">{item?.title}</Typography>
+                        <Typography color="word">{item?.description}</Typography>
                     </Grid2>
                     </Grid2>
                 )
@@ -85,14 +85,14 @@ function Education() {
             {
                 education && education.map((item, index) => 
                     <Grid2 container size={12} key={index}>
-                    <Grid2 size={{xs: 3, lg: 4}}>
+                    <Grid2 size={{xs: 3, lg: 4}} color="word">
                         {item?.duration}
                     </Grid2>
                     <Grid2 size={{xs: 9, lg: 8}}>   
-                        <Typography sx={{fontWeight: "bold", mb: 1}}>{item?.university}</Typography>
-                        <Typography sx={{mb: 1}}>{item?.degree}</Typography>
-                        <Typography sx={{mb: 1}}>{item?.field}</Typography>
-                        <Typography>{item?.thesis}</Typography>
+                        <Typography sx={{mb: 1}} fontWeight="bold">{item?.university}</Typography>
+                        <Typography sx={{mb: 1}} color="word">{item?.degree}</Typography>
+                        <Typography sx={{mb: 1}} color="word">{item?.field}</Typography>
+                        <Typography color="word">{item?.thesis}</Typography>
                     </Grid2>
                     </Grid2>
                 )

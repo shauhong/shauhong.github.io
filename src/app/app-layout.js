@@ -34,6 +34,7 @@ export default function AppLayout({ children }) {
             secondary: {
                 main: "#000"
             },
+            word: "#474747",
         },
     })
     return (

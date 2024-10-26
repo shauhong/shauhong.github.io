@@ -86,6 +86,9 @@ const skills = {
 }
 export default function Skills() {
     return <Box display="block">
+        <Typography variant="h5" component="div" sx={{display: "block", mb: 4}}>
+            Skills
+        </Typography>
     {
         skills && Object.keys(skills).map((item, index) => 
             <React.Fragment key={index}>
@@ -100,14 +103,14 @@ export default function Skills() {
 function SkillMatrix({title, skills}) {
     return (
         <Box sx={{ display: "block" }}>
-            <Typography variant="h5" component="div" sx={{ display: "block" }}>
+            <Typography variant="h5" component="div" sx={{ display: "block" }} fontWeight="light">
                 {title}
             </Typography>
             <Grid2 container sx={{ my: 4 }} rowSpacing={2} columnSpacing={2}>
                 {
                     skills && skills.map((item, index) =>
                         <Grid2 key={index}>
-                            <Button variant="contained" color="secondary" sx={{'&:hover': {cursor: "default"}, borderRadius: 2}}>{item.name}</Button>
+                            <Button variant="contained" color="secondary" disableRipple sx={{'&:hover': {cursor: "default"}, borderRadius: 2}}>{item.name}</Button>
                         </Grid2>
                     )
                 }

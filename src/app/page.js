@@ -1,13 +1,13 @@
 "use client"
-import { Box, Grid2, IconButton, Stack, Typography } from "@mui/material";
+import { Box, IconButton, Stack, Typography } from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { useTheme } from "@emotion/react";
 
 const about = {
   name: "Lim Shau Hong",
   title: "Software Engineer",
-  description: "I'm a software engineer based in Penang, Malaysia specializing in \
-  building web applications and machine learning applications.",
+  description: "I'm a software engineer based in Penang, Malaysia passionate about full stack web development and machine learning.", 
   social: {
     linkedin: "https://linkedin.com/in/shauhong",
     github: "https://github.com/shauhong"
@@ -15,42 +15,32 @@ const about = {
 }
 
 export default function Home() {
+  const theme = useTheme();
+  console.log(theme)
   return (
     <Box display="block" sx={{ backgroundImage: `url("/graph-paper.svg")`, height: "80vh", p: 2 }}>
       <Typography variant="h5" component="div" sx={{ display: "block" }}>
         About Me
       </Typography>
-      <Grid2 container size={12} sx={{ my: 16, display: { xs: "none", sm: "flex" } }} rowSpacing={4} columnSpacing={4}>
-        <Grid2 size={{ sm: 6 }}>
-          <Typography variant="h1" sx={{ mb: 1, fontWeight: "bold" }}>
-            {about?.name}
-          </Typography>
-          <Typography variant="h5">
-            {about?.title}
-          </Typography>
-        </Grid2>
-        <Grid2 size={{ sm: 6 }}>
-          <Typography variant="h5" sx={{ px: 4 }}>
-            {about?.description}
-          </Typography>
-        </Grid2>
-      </Grid2>
-      <Stack sx={{ my: 12, display: { xs: "block", sm: "none" } }}>
-        <Typography variant="h2" sx={{ mb: 2, fontWeight: "bold" }}>
+      <Stack sx={{ my: {xs: 2, sm: 8, md: 14 } }}>
+      <Typography variant="h5" sx={{ mb: 2 }} fontWeight="light" color="word">
+          Hi there, I'm
+        </Typography>
+        <Typography variant="h1" sx={{ mb: 2 }} fontWeight="bold">
           {about?.name}
         </Typography>
-        <Typography variant="h5" sx={{mb: 4}}>
+        <Typography variant="h5" sx={{mb: 6}} fontWeight="light" color="word">
           {about?.title}
         </Typography>
-        <Typography variant="h5">
+        <Typography variant="h4" fontWeight="light" color="word">
           {about?.description}
         </Typography>
       </Stack>
-      <IconButton href={about.social.linkedin} size="large">
+      <IconButton href={about.social.linkedin} size="large" disableRipple sx={{transition: "transform 0.1s ease-in-out", '&:hover': {color: theme.palette.word, transform: "scale(1.2)"}}}>
         <LinkedInIcon fontSize="large" />
       </IconButton>
-      <IconButton href={about.social.github} size="large">
-        <GitHubIcon fontSize="large" />
+      <IconButton href={about.social.github} size="large" disableRipple sx={{transition: "transform 0.1s ease-in-out", '&:hover': {color: theme.palette.word, transform: "scale(1.2)"}}}>
+        <GitHubIcon fontSize="large"/>
       </IconButton>
     </Box>
   )
