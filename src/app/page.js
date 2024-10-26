@@ -24,7 +24,7 @@ export default function Home() {
       </Typography>
       <Stack sx={{ my: {xs: 2, sm: 8, md: 14 } }}>
       <Typography variant="h5" sx={{ mb: 2 }} fontWeight="light" color="word">
-          Hi there, I'm
+          Hi there, I&apos;m
         </Typography>
         <Typography variant="h1" sx={{ mb: 2 }} fontWeight="bold">
           {about?.name}
@@ -36,10 +36,10 @@ export default function Home() {
           {about?.description}
         </Typography>
       </Stack>
-      <IconButton href={about.social.linkedin} size="large" disableRipple sx={{transition: "transform 0.1s ease-in-out", '&:hover': {color: theme.palette.word, transform: "scale(1.2)"}}}>
+      <IconButton href={about.social.linkedin} size="large" disableRipple sx={{transition: "transform 0.1s ease-in-out", "&:hover": {color: theme.palette.word, transform: "scale(1.2)"}}}>
         <LinkedInIcon fontSize="large" />
       </IconButton>
-      <IconButton href={about.social.github} size="large" disableRipple sx={{transition: "transform 0.1s ease-in-out", '&:hover': {color: theme.palette.word, transform: "scale(1.2)"}}}>
+      <IconButton href={about.social.github} size="large" disableRipple sx={{transition: "transform 0.1s ease-in-out", "&:hover": {color: theme.palette.word, transform: "scale(1.2)"}}}>
         <GitHubIcon fontSize="large"/>
       </IconButton>
     </Box>
