@@ -103,7 +103,7 @@ export default function Skills() {
 function SkillMatrix({title, skills}) {
     return (
         <Box sx={{ display: "block" }}>
-            <Typography variant="h5" component="div" sx={{ display: "block" }} fontWeight="light">
+            <Typography variant="h6" component="div" sx={{ display: "block" }} fontWeight="light">
                 {title}
             </Typography>
             <Grid2 container sx={{ my: 4 }} rowSpacing={2} columnSpacing={2}>
