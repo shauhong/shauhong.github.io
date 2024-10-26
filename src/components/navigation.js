@@ -15,17 +15,19 @@ export function NavBar({
             <Toolbar sx={{ display: "flex" }}>
                 {
                     links && links.map(item => 
+                        <Link href={item.link} key={item.name}> 
                         <Button 
                         key={item.name} 
-                        color="tertiary"
+                        color="secondary"
                         disableRipple 
                         sx={{
                             "&:hover": { cursor: "default", border: "none", fontWeight: "bold", backgroundColor: "initial", borderColor: "initial"}, 
                             fontWeight: pathname === item.link ? "bold" : "regular"
                         }}
                         >
-                            <Link href={item.link}>{item.name}</Link>
+                            {item.name}
                         </Button>
+                        </Link>
                     )
                 }
             </Toolbar>
