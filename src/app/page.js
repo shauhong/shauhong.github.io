@@ -18,7 +18,7 @@ export default function Home() {
   const theme = useTheme();
   console.log(theme)
   return (
-    <Box display="block" sx={{ backgroundImage: `url("/graph-paper.svg")`, height: "80vh", p: 2 }}>
+    <Box display="block" sx={{ backgroundImage: `url("/graph-paper.svg")`, p: 2 }}>
       <Typography variant="h5" component="div" sx={{ display: "block" }}>
         About Me
       </Typography>
