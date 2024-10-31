@@ -86,7 +86,7 @@ function Education() {
                 education && education.map((item, index) => 
                     <Grid2 container size={12} key={index}>
                     <Grid2 size={{xs: 3, lg: 4}} color="word">
-                        {item?.duration}
+                        <Typography>{item?.duration}</Typography>
                     </Grid2>
                     <Grid2 size={{xs: 9, lg: 8}}>   
                         <Typography sx={{mb: 1}} fontWeight="bold">{item?.university}</Typography>
